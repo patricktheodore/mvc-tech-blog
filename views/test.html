@@ -18,28 +18,29 @@
 <body>
 
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg sitcky-top custom-nav justify-content-evenly">
-                <a class="navbar-brand custom-brand" href="/">patricktheodore. - &#60;techBlog></a>
-                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="fas fa-bars fa-2x" id="burger-nav"></span>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse custom-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gx-0 nav-links-container">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link custom-link" href="/">home.</a>
+                            <a class="nav-link" href="#">home.</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link custom-link" href="/dashboard">dashboard.</a>
+                            <a class="nav-link" href="#">dashboard.</a>
                         </li>
                         <li class="nav-item">
-                            {{#if logged_in}}<button class="nav-link custom-link" id="logout">logout</button>
-                            {{else}} <a class="nav-link custom-link" id="profile" href="/login">login</a>
-                            {{/if}}
+                            <button class="btn btn-outline-success" type="submit">search.</button>
                         </li>
                     </ul>
+
                 </div>
+            </div>
         </nav>
     </header>
 
