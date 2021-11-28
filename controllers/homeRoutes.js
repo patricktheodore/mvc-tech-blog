@@ -32,7 +32,7 @@ router.get('/post/:id', async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ['name'],
+                    attributes: ['name', 'id'],
                 },
             ],
         });
@@ -48,7 +48,7 @@ router.get('/post/:id', async (req, res) => {
     }
 });
 
-router.get('/user/:id', /*auth,*/ async (req, res) => {
+router.get('/user/:id', auth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.params.id, {
             attributes: { exclude: ['password'] },
@@ -62,27 +62,46 @@ router.get('/user/:id', /*auth,*/ async (req, res) => {
 
         const user = userData.get({ plain: true });
 
-        res.json(user);
+        // res.json(user);
 
-        // res.render('profile', {
-        //     ...user,
-        //     logged_in: true
-        // });
+        res.render('profile', {
+            ...user,
+            logged_in: true
+        });
     } catch (err) {
         res.status(500).json(err)
     }
 });
 
-router.get('/login', (req, res) => {
-    if (req.session.logged_in) {
-        res.redirect('/profile');
-        return;
-    }
+router.get('/dashboard', auth, async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [
+                {
+                    model: Post,
+                    attributes: ['id', 'title', 'content', 'date_created']
+                },
+            ],
+        });
 
-    res.render('login');
+        const user = userData.get({ plain: true });
+
+        // res.json(user);
+
+        res.render('dashboard', {
+            ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err)
+    }
 });
 
-router.get('/dashboard', (req, res) => {
+
+
+
+router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/dashboard');
         return;
