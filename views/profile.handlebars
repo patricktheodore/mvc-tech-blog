@@ -1,35 +1,28 @@
-<div class="row">
-    <div class="col-auto">
-        <h2>User: {{name}}</h2>
-    </div>
+<div class="row text-center">
+  <div class="col-12 text-center">
+    <h2 id="username">User: {{name}}.</h2>
+    <h5 id="usernameId">Id: #{{id}}</h5>
+  </div>
 </div>
 
-<div class="row mt-4">
+
+
+  <div class="row">
     {{#if posts.length}}
     <div class="col-12 post-list">
-        <h3>Recent Posts:</h3>
-
-        {{#each posts as |post|}}
-        <div class="row mb-2">
-            <div class="col-md-8">
-                <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4><span> - {{format_date post.date_created}}</span>
-            </div>
+      <h3 id="recent-posts">Recent Posts:</h3>
+      {{#each posts as |post|}}
+      <div class="col-12 recent-post-card">
+        <div class="card">
+          <div class="card-header">
+            <h4><a href="/post/{{post.id}}">{{post.title}}</a><span> - {{format_date post.date_created}}</span></h4>
+          </div>
+          <div class="card-body">
+            <p>{{post.content}}</p>
+          </div>
         </div>
-        {{/each}}
+      </div>
     </div>
-    {{/if}}
-</div>
-
-{{#if loggedIn}}
-<div class="card border-dark">
-    <h3 class="card-header bg-dark text-light">Add a Comment</h3>
-    <form class="comment-form card-body">
-        <div class="form-group">
-            <textarea name="comment-body" class="form-control"></textarea>
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-secondary">Submit</button>
-        </div>
-    </form>
-</div>
-{{/if}}
+    {{/each}}
+  </div>
+  {{/if}}

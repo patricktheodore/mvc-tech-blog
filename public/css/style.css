@@ -1,0 +1,171 @@
+/*webapp color scheme*/
+:root {
+    --dark: #343a40;
+    --light: #e3e8ec;
+    --primary: #5d666b;
+    --secondary: #a7a7a7;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--secondary);
+    width: 100vw;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+}
+
+
+    /*header styling start*/
+.custom-brand {
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    color: white;
+    letter-spacing: -0.1rem;
+}
+
+.custom-link {
+    color: var(--secondary);
+    padding-left: 2rem;
+}
+
+.custom-toggler {
+    border: none;
+}
+ 
+.nav-links-container {
+    margin-left: 2rem;
+}
+
+.custom-link:hover {
+    color: white;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.fa-2x {
+    padding: 1rem;
+}
+
+#logout {
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity));
+    border: none;
+}
+
+.card-title,
+#comment-header,
+#welcome,
+#recent-posts {
+    color: var(--dark);
+}
+
+#comment,
+.post-card {
+    width: 100%;
+}
+
+#comment-form-title,
+#comment, 
+#postBtn {
+    padding: 0.2rem;
+    margin: 0.2rem;
+}
+
+/*header style end*/
+.post-card,
+.comment-form,
+#comment-header,
+#dont-prompt {
+    margin-top: 2rem;
+}
+
+#email-login-label,
+#password-login-label,
+#name-signup-label,
+#email-signup-label,
+#password-signup-label {
+    width: 20%;
+    text-align: start;
+}
+
+#post-title-label,
+#message-title-label {
+    width: 10%;
+    text-align: start;
+}
+
+#post-title,
+#post-desc {
+    width: 85%;
+}
+
+#post-desc {
+    padding-bottom: 4rem;
+}
+
+.btn-primary,
+#delBtn,
+#update-text-area {
+    width: 100%;
+}
+#delBtn {
+    margin: 0.5rem 0 1rem 0;
+}
+
+#welcome,
+#recent-posts,
+#username,
+#usernameId {
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--dark);
+}
+
+#email-login,
+#password-login,
+#name-signup,
+#email-signup,
+#password-signup {
+    width: 75%;
+}
+
+.auth-title {
+    color: var(--dark);
+    padding: 2rem 0;
+}
+
+.form-group,
+.recent-post-card {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.footer-social-link a,
+#update-title {
+    text-align: center;
+}
+
+.footer-social-link {
+    padding: 1rem;
+}
+
+.fa-github:hover,
+.fa-instagram:hover,
+.fa-linkedin-in:hover,
+.fa-facebook:hover {
+    color: var(--primary);
+}
+
+.footer-cont,
+#update-title {
+    margin: 2rem 0;
+}
+
+.footer-socials {
+    margin-top: 5rem;
+}
+
+.recenet-post-card {
+    max-width: 100%;
+}
+
+
