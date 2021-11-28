@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post } = require('../models');
+const { User, Post, Comment } = require('../models');
 const auth = require('../utils/auth');
 
 // GET all posts for the homepage. (auth not required)
@@ -33,6 +33,14 @@ router.get('/post/:id', async (req, res) => {
                 {
                     model: User,
                     attributes: ['name', 'id'],
+                },
+                {
+                    model: Comment, 
+                    attributes: ['id', 'text', 'post_id', 'user_id', 'created_at'],
+                    include: {
+                        model: User,
+                        attributes: ['name']
+                    },
                 },
             ],
         });

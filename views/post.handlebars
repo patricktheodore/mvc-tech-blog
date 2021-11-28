@@ -10,3 +10,43 @@
     </blockquote>
   </div>
 </div>
+
+
+
+<div class="row mt-4">
+    {{#if comments.length}}
+    <div class="col-12 post-list">
+        <h3>Comments:</h3>
+
+        {{#each comments as |comment|}}
+        <div class="row mb-2">
+            <div class="col-md-8">
+                <h4><a href="/user/{{comment.user_id}}">{{comment.user.name}}</a></h4>
+            </div>
+            <div>
+              <p>{{comment.text}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+
+  {{#if logged_in}}
+  <div class="col-12">
+    <h3>Leave a comment:</h3>
+    <form class="form new-post-form">
+      <div class="form-group">
+        <textarea class="form-input" id="comment" name="comment" placeholder="comment:"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="postBtn">Post.</button>
+      </div>
+    </form>
+  </div>
+  {{/if}}
+
+  {{#if logged_in}}
+  <script src="/js/comment.js"></script>
+  {{/if}}
+
+</div>
