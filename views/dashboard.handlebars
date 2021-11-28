@@ -1,20 +1,20 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+<div class="row text-center">
+  <div class="col-12 text-center">
+    <h2 id="welcome">Welcome, {{name}}!</h2>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
+<div class="row justify-content-center">
+  <div class="col-md-10 text-center">
     <h3>Create a New Post:</h3>
 
     <form class="form new-post-form">
       <div class="form-group">
-        <label for="post-title">post title:</label>
+        <label for="post-title" id="post-title-label">post title:</label>
         <input class="form-input" type="text" id="post-title" name="post-title" />
       </div>
       <div class="form-group">
-        <label for="post-desc">message:</label>
+        <label class="align-middle" for="post-desc" id="message-title-label">message:</label>
         <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
       </div>
       <div class="form-group">
@@ -22,23 +22,32 @@
       </div>
     </form>
   </div>
+</div>
 
+
+<div class="row">
   <div class="row mt-4">
     {{#if posts.length}}
     <div class="col-12 post-list">
-      <h3>Recent Posts:</h3>
+      <h3 id="recent-posts">Recent Posts:</h3>
       {{#each posts as |post|}}
-      <div class="row mb-2">
-        <div class="col-md-8">
-          <h4><a href="dashboard/edit/{{post.id}}">{{post.title}}</a></h4><span> - {{format_date post.date_created}}</span>
-        </div>
-        <div class="col-md-4">
-          <button class="btn btn-sm btn-danger" id="delBtn" data-id="{{post.id}}">DELETE</button>
+      <div class="col-12 recent-post-card">
+        <div class="card">
+          <div class="card-header">
+            <h4><a href="dashboard/edit/{{post.id}}">{{post.title}}</a><span> - {{format_date post.date_created}}</span></h4>
+          </div>
+          <div class="card-body">
+            <p>{{post.content}}</p>
+          </div>
         </div>
       </div>
-      {{/each}}
+      <div class="col-12 text-center">
+        <button class="btn btn-sm btn-danger" id="delBtn" data-id="{{post.id}}">DELETE</button>
+      </div>
     </div>
-    {{/if}}
+    {{/each}}
   </div>
+  {{/if}}
+</div>
 
-  <script src="/js/dashboard.js"></script>
+<script src="/js/dashboard.js"></script>
