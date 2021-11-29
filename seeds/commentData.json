@@ -1,7 +1,67 @@
 [
     {
-        "text": "test text for comment",
+        "text": "You will have to create your User class for this to work tho so you are able to populate your source, if you don't want to, you can always use a List<DataRow> in your DataTableSource instead of a List<User> and manually map each cell.",
+        "user_id": 5,
+        "post_id": 2
+    },
+    {
+        "text": "You authorized Charcoal to raise spam flags using your account. These flags were raised by the Charcoal project via metasmoke, based on the posts being reported by SmokeDetector. You have an account on metasmoke under the name 'the4kman', which you created at 2017-09-11 15:07Z. At some time after that, you authorized metasmoke to use flags on your account to automatically flag spam. Automatic flags are randomly allocated to users who have granted authorization for their flags to be used. Here you can find a list of the automatic flags which metasmoke has raised under your account",
+        "user_id": 1,
+        "post_id": 4
+    },
+    {
+        "text": "You Maniac!",
         "user_id": 2,
+        "post_id": 6
+    },
+    {
+        "text": "Damn Son!",
+        "user_id": 1,
+        "post_id": 6
+    },
+    {
+        "text": "PokeMon Master",
+        "user_id": 3,
+        "post_id": 6
+    },
+    {
+        "text": "This is broken for UTF-16 strings that contain surrogate pairs, i.e. characters outside of the basic multilingual plane. It will also give funny results for strings containing combining chars, e.g. a diaeresis might appear on the following character. The first issue will lead to invalid unicode strings, the second to valid strings that look funny.",
+        "user_id": 5,
         "post_id": 1
+    },
+    {
+        "text": "Have you tried using Electric Pokemon?",
+        "user_id": 6,
+        "post_id": 1
+    },
+    {
+        "text": "Squirtle is my favourite pokemon",
+        "user_id": 6,
+        "post_id": 2
+    },
+    {
+        "text": "How do you get pikachu onto a bus?",
+        "user_id": 6,
+        "post_id": 3
+    },
+    {
+        "text": "Almost forgot the punchline. You Poke-mon",
+        "user_id": 6,
+        "post_id": 3
+    },
+    {
+        "text": "Like Poke him on...",
+        "user_id": 6,
+        "post_id": 3
+    },
+    {
+        "text": "I really relate to snorlax, that's why I sleep on the street",
+        "user_id": 6,
+        "post_id": 4
+    },
+    {
+        "text": "pika pika",
+        "user_id": 6,
+        "post_id": 5
     }
 ]
