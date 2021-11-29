@@ -1,4 +1,4 @@
-<div class="col-10 post-card">
+<div class="col-sm-12 col-md-10 post-card">
   <div class="card">
     <div class="card-header">
       <a href="/user/{{user.id}}">{{user.name}}</a><span> - {{format_date date_created}}</span>
@@ -14,7 +14,7 @@
 
 <div class="row mt-4 justify-content-center">
   {{#if comments.length}}
-  <div class="col-8 post-list">
+  <div class="col-sm-12 col-md-8 post-list">
     <h3 id="comment-header">comments:</h3>
 
     {{#each comments as |comment|}}
@@ -33,7 +33,7 @@
   {{/if}}
 
   {{#if logged_in}}
-  <div class="col-6 comment-form">
+  <div class="col-sm-12 col-md-6 comment-form">
     <h3 class="card-title" id="comment-form-title">leave a comment:</h3>
     <form class="form new-post-form">
       <div class="row"><div class="col-12">
