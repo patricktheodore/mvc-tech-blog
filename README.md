@@ -100,7 +100,11 @@ bcrypt, sequelize, dotenv, expess, handlebars, mysql2
 
   # Screenshots
 
-  
+  ![Home Page](./assets/Screen%20Shot%202021-11-29%20at%2012.54.18%20am.png)
+  ![Dashboard](./assets/Screen%20Shot%202021-11-29%20at%205.40.36%20pm.png)
+  ![Login](./assets/Screen%20Shot%202021-11-29%20at%205.39.47%20pm.png)
+
+
 
   
   <p align="right">(<a href="#top">back to top</a>)</p>  
