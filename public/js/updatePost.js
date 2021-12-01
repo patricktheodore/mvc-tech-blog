@@ -24,6 +24,6 @@ const editFormHandler = async (event) => {
   }
 };
 
-document
-  .querySelector('#editBtn')
-  .addEventListener('click', editFormHandler);
+document.querySelectorAll('#editBtn').forEach(btn => {
+  btn.addEventListener('click', editFormHandler)
+});
