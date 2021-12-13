@@ -1,7 +1,7 @@
 
-  <h1 style="text-align: center;">techBlog</h1>
+  <h1 align="center">techBlog</h1>
 
-  <p style="text-align: center;">
+  <p align="center">
   <a href="https://github.com/patricktheodore/mvc-tech-blog/issues"><img alt="number of issues for the repository" src="https://img.shields.io/github/issues/patricktheodore/mvc-tech-blog?color=red&label=Issues&style=for-the-badge" target="_blank" /></a>
   <a href="https://github.com/patricktheodore/mvc-tech-blog"><img alt="the size of the repo in kb" src="https://img.shields.io/github/repo-size/patricktheodore/mvc-tech-blog?color=orange&label=Repo-Size&style=for-the-badge" target="_blank" /></a>
   <a href="https://opensource.org/licenses/MIT"><img alt="licence the repo is published under" src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" target="_blank" /></a>
@@ -10,7 +10,7 @@
   <a href="https://github.com/patricktheodore/mvc-tech-blog/stargazers"><img alt="total number of times the repo has been starred" src="https://img.shields.io/github/stars/patricktheodore/mvc-tech-blog?color=blueviolet&label=Stars&style=for-the-badge" target="_blank" /></a>
   </p>
 
-  <div style="text-align: center;">
+  <div align="center">
     <p>
       <h3>techBlog is an application that allows users to post about tech related things and have other devs comment on the post</h3>
       <a href="https://github.com/patricktheodore/mvc-tech-blog"><strong>Explore the docs »</strong></a>
